@@ -133,11 +133,13 @@ const App=()=>{
 //++++++++++++++++++++++ components
 // //fragments are empty tag <></> works as wrapper
 //we can extract components of header using import header from "path of header"
-const user="Vanika"
+// const user="Vanika"
  return (
   <>
   <Header></Header> 
-  <Card username={user} age='20' city='Pinjore'></Card>
+  <div className='p-10'>
+  <Card user="Vanika" age='20' city='Pinjore'></Card>
+  </div>
   <Footer></Footer>
   </>
  )
