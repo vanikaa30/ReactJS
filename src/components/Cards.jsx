@@ -4,12 +4,16 @@ import React from 'react'
 const Cards = (props) => {
     console.log(props)
   return (
-    <div className='bg-zinc-900 inline-block p-6 text-center rounded'>
-        <img className='ml-8 h-32 w-32 rounded-full mb-3' src="" alt=""/>
-        <h1 className='text-2xl font-semibold mb-4'>Username: {props.user}</h1>
-        <h1>Age: {props.age}</h1>
-        <h2>City: {props.city}</h2>
-        <button className='bg-red-950 p-2 m-4 rounded'>Submit</button>
+    <div className='mr-7 mt-7  bg-white text-black inline-block p-6 text-center rounded'>
+        <img className='ml-12 h-32 w-32 rounded-full mb-3' src={props.photo} alt=""/>
+        <h1 className='text-xl font-semibold mb-2'>{props.user}</h1>
+       <h1 className='text-blue-500'>(Profession: {props.prof})</h1>
+        <h1 >Age: {props.age}</h1>
+        <h2 >City: {props.city}</h2>
+        <button className='bg-emerald-700 text-white font-medium p-2 m-4 rounded'>Add Friend</button>
+         
+        
+   
     </div>
   )
 }

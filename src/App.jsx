@@ -134,11 +134,58 @@ const App=()=>{
 // //fragments are empty tag <></> works as wrapper
 //we can extract components of header using import header from "path of header"
 // const user="Vanika"
+
+const users=[
+  {
+    "name": "John Doe",
+    "city": "New York",
+    "age": 28,
+    "profession": "Software Engineer",
+    "profile_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcIvfoMQYJOk-wZDwS6vOA7a9RbUmUJoFEx7m4Lt_TtxOXzScWowvCVmxgDRslDLfSXEs&usqp=CAU"
+  },
+  {
+    "name": "Alice Smith",
+    "city": "Los Angeles",
+    "age": 25,
+    "profession": "Graphic Designer",
+    "profile_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuJqONwdQEUoyffX4L3eLxdVGGXjEl_4vJTW2206VZxi0k7TUfEDZAQwOu03Wn6DjnMgM&usqp=CAU"
+  },
+  {
+    "name": "Michael Johnson",
+    "city": "Chicago",
+    "age": 32,
+    "profession": "Data Scientist",
+    "profile_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVYZ3xPozpGSAtIlDfNZfUxhRm17mGe2Huih3YkgD775nDD0zKtd78kSoOKt2OT70JONU&usqp=CAU"
+  },
+  {
+    "name": "Emily Davis",
+    "city": "Houston",
+    "age": 29,
+    "profession": "Marketing Manager",
+    "profile_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMGnc7qlf9bINq0wWk9K6CCr3MCrrKs-7J_utYu50Hr4zXXeAURVf7Mj647ptQf65cxi8&usqp=CAU"
+  },
+  {
+    "name": "Robert Brown",
+    "city": "San Francisco",
+    "age": 35,
+    "profession": "Product Manager",
+    "profile_photo": "https://m.media-amazon.com/images/I/41ONa5HOwfL.jpg"
+  }
+]
+// users.forEach((ele)=>{
+//   console.log(ele)
+// })
+
+
+
  return (
   <>
   <Header></Header> 
   <div className='p-10'>
-  <Card user="Vanika" age='20' city='Pinjore'></Card>
+  <Card user="Vanika Verma" age='20' city='Pinjore' photo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcdztCmviShnd15Ef_oaT2WVUjrqqIPb_vklq7elHOB2pENMpjdjD4Z7-lRfU820QotxE&usqp=CAU" prof="Web Developer"></Card>
+   {users.map((ele,idx)=>{
+    return <Card key={idx} user={ele.name} age={ele.age} city={ele.city} photo={ele.profile_photo} prof={ele.profession}></Card>
+   })}
   </div>
   <Footer></Footer>
   </>
